@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<VBox alignment="CENTER" prefHeight="300.0" prefWidth="330.0" spacing="20.0"
+      xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label text="%NewGameLabel">
+            <font>
+                <Font size="20.0"/>
+            </font>
+        </Label>
+        <Label text="%ChooseSizeLabel"/>
+        <HBox alignment="CENTER" prefHeight="71.0" spacing="20.0">
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+            <children>
+                <RadioButton fx:id="smallRadioButton" mnemonicParsing="false"
+                             text="%SmallRadioButton">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="size"/>
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="classicRadioButton" mnemonicParsing="false" selected="true"
+                             text="%ClassicRadioButton" toggleGroup="$size"/>
+                <RadioButton fx:id="largeRadioButton" mnemonicParsing="false"
+                             text="%LargeRadioButton" toggleGroup="$size"/>
+            </children>
+        </HBox>
+        <Label text="%ChooseDifficultyLabel"/>
+        <Button fx:id="easyButton" minWidth="120.0" text="%EasyButton" textAlignment="CENTER"/>
+        <Button fx:id="mediumButton" minWidth="120.0" text="%MediumButton" textAlignment="CENTER"/>
+        <Button fx:id="hardButton" minWidth="120.0" text="%HardButton" textAlignment="CENTER"/>
+        <Label text="%LoadGameLabel">
+            <font>
+                <Font size="20.0"/>
+            </font>
+        </Label>
+        <Button fx:id="fileLoadButton" minWidth="120.0" text="%FileLoadButton"
+                textAlignment="CENTER"/>
+
+        <VBox alignment="CENTER">
+            <ComboBox fx:id="dbLoadComboBox" minWidth="120.0" maxWidth="120.0" promptText="%DbLoadComboBoxPromptText"/>
+            <Button disable="true" fx:id="dbLoadButton" minWidth="120.0" maxWidth="120.0" text="%DbLoadButton"
+                    textAlignment="CENTER"/>
+        </VBox>
+        <Label text="%ExitLabel">
+            <font>
+                <Font size="20.0"/>
+            </font>
+        </Label>
+        <Button id="exit-button" fx:id="exitButton" minWidth="120.0" text="%ExitButton"
+                textAlignment="CENTER"/>
+        <Label text="%ChangeLanguageLabel">
+            <font>
+                <Font size="20.0"/>
+            </font>
+        </Label>
+        <HBox alignment="CENTER" prefHeight="0.0" prefWidth="300.0" spacing="20.0">
+            <children>
+                <Button fx:id="langEN" minWidth="120.0" mnemonicParsing="false" text="%LangEN"/>
+                <Button fx:id="langPL" minWidth="120.0" mnemonicParsing="false" text="%LangPL"/>
+            </children>
+        </HBox>
+        <Label text="%AuthorsLabel">
+            <font>
+                <Font size="20.0"/>
+            </font>
+        </Label>
+        <Label fx:id="authorOne"/>
+        <Label fx:id="authorTwo"/>
+    </children>
+    <padding>
+        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0"/>
+    </padding>
+    <stylesheets>
+        <URL value="@game.css"/>
+    </stylesheets>
+</VBox>
